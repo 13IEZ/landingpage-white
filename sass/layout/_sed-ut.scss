@@ -1,0 +1,60 @@
+.set-ut-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include respond(big-tablets) {
+    flex-direction: column;
+  }
+}
+
+.text-first-convert {
+  padding: 0 8rem 2rem;
+  @include respond(small-tablets) {
+    padding: 0;
+  }
+}
+
+.paragraph-first-conver {
+  padding: 0 8.4rem 0 8.4rem;
+  @include respond(small-tablets) {
+    padding: 0;
+  }
+}
+
+.wrapper-first-convert {
+  width: 100%;
+  padding: 8rem 0;
+  @include respond(wide-desktop) {
+    width: 50%;
+  }
+  @include respond(big-tablets) {
+    width: 100%;
+    padding: 4rem 0;
+  }
+}
+
+.wrapper-text-first-convert {
+  @include respond(wide-desktop) {
+    width: 50%;
+  }
+  @include respond(big-tablets) {
+    width: 100%;
+    padding: 4rem 0;
+  }
+
+}
+
+.first-convert {
+  display: block;
+  width: 100%;
+}
+
+.set-ut-wrapper--grey {
+  background-color: #F5F5F5;
+}
+
+
+
+
+

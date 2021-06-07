@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+//use in header
+.nav {
+  &__btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 4rem;
+    margin-right: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid $blue-text-color;
+    border-radius: 0.6rem;
+    @include on-event {
+      transform: none;
+      color: $white-text-color;
+      background-color: $blue-color;
+    }
+  }
+
+  &__btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 4rem;
+    transition: background-color 0.3s, color 0.3s;
+    color: $white-text-color;
+    border: 1px solid $blue-text-color;
+    border-radius: 0.6rem;
+    background-color: $blue-text-color;
+    @include on-event {
+      transform: none;
+      color: $blue-color;
+      background-color: $white-text-color;
+    }
+  }
+}
+
+//use in video
+.video {
+  &__play-btn {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: translate(-50%, -50%);
+    @include on-event {
+      transform: translate(-50%, -60%);
+    }
+    @include respond(wide-desktop) {
+      top: 40%;
+    }
+    @include respond(big-tablets) {
+      top: 30%;
+      width: 10rem;
+      height: 10rem;
+    }
+    @include respond(small-tablets) {
+      top: 40%;
+      width: 6rem;
+      height: 6rem;
+    }
+    @include respond(small-phone) {
+      top: 50%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 20;
+    top: 80%;
+    left: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 19.2rem;
+    min-height: 5.2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    transform: translateX(-50%);
+    border: 0.1rem solid $blue-color;
+    border-radius: 0.6rem;
+    background: $white-text-color;
+
+    &--primary {
+      color: $white-text-color;
+      background: $blue-color;
+      @include on-event {
+        transform: translate(-50%, 0);
+        color: $blue-text-color;
+        outline: none;
+        background: $white-text-color;
+      }
+    }
+
+    @include respond(wide-desktop) {
+      top: 85%;
+    }
+    @include respond(big-tablets) {
+      top: 80%;
+    }
+    @include respond(small-tablets) {
+      display: none;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

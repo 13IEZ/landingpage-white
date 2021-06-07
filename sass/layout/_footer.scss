@@ -1,0 +1,106 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  &__container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    @include respond(big-tablets) {
+      padding: 12rem 3rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include respond(wide-desktop) {
+      flex-direction: column;
+    }
+
+    &:after {
+      display: block;
+      width: 100%;
+      height: 0.1rem;
+      margin-top: 4rem;
+      content: '';
+      background-color: rgba(0, 0, 0, 0.5);
+      @include respond(wide-desktop) {
+        order: 4;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    display: inline-block;
+    min-width: 17.3rem;
+    @include respond(wide-desktop) {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    display: block;
+    @include respond(wide-desktop) {
+      order: 1;
+    }
+  }
+
+  &__links {
+    display: flex;
+    @include respond(wide-desktop) {
+      margin-top: 3rem;
+    }
+    @include respond(big-tablets) {
+      flex-direction: column;
+    }
+
+    &--1 {
+      text-align: left;
+      @include respond(wide-desktop) {
+        order: 2;
+      }
+
+      & .footer__link:not(:first-child) {
+        margin-left: 2rem;
+        @include respond(small-tablets) {
+          margin-top: 2rem;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--2 {
+      text-align: right;
+      @include respond(wide-desktop) {
+        order: 3;
+      }
+
+      & .footer__link:not(:first-child) {
+        margin-left: 2rem;
+        @include respond(small-tablets) {
+          margin-top: 2rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__grid-container {
+    justify-content: center;
+    margin: 8rem auto 0;
+    grid-template-columns: repeat(4, min-content);
+    grid-gap: 2rem;
+  }
+
+  &__copyright {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    margin-top: 4rem;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: $gray-text-color;
+  }
+}

@@ -1,0 +1,79 @@
+.subscribe {
+  background: $gray-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    @include respond(big-tablets) {
+      flex-direction: column;
+    }
+    @include respond(big-tablets) {
+      padding: 12rem 3rem;
+    }
+  }
+
+  &__info {
+    max-width: 94.3rem;
+    margin-top: 0;
+    @extend .company__subtitle;
+    margin-right: 8rem;
+    text-align: left;
+    @include respond(big-tablets) {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    @include respond(big-tablets) {
+      margin-top: 3rem;
+    }
+    @include respond(small-phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 19.2rem;
+    min-height: 5.2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    border: 0.1rem solid $blue-color;
+    border-radius: 0.6rem;
+    background: $white-text-color;
+
+    &--primary {
+      color: $white-text-color;
+      background: $blue-color;
+      @include on-event {
+        transform: translateY(-0.1rem);
+        color: $blue-text-color;
+        outline: none;
+        background: $white-text-color;
+      }
+    }
+
+    &--outline {
+      margin-left: 4.5rem;
+      color: $blue-text-color;
+      @include respond(small-phone) {
+        margin-top: 3rem;
+        margin-left: 0;
+      }
+
+      @include on-event {
+        transform: translateY(-0.1rem);
+        color: $white-text-color;
+        outline: none;
+        background: $blue-text-color;
+      }
+    }
+  }
+}

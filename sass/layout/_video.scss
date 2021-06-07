@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the video of the site/application.
+// -----------------------------------------------------------------------------
+
+.video-wrapper {
+  position: relative;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &--blur {
+    opacity: 0.6;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 20;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    max-width: 139.2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include respond(wide-desktop) {
+      text-align: center;
+    }
+    @include respond(big-tablets) {
+      font-size: 270%;
+      line-height: 5rem;
+      top: 60%;
+    }
+    @include respond(small-tablets) {
+      font-size: 220%;
+      top: 70%;
+    }
+    @include respond(small-phone) {
+      display: none;
+    }
+  }
+}

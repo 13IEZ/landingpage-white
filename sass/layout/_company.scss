@@ -1,0 +1,49 @@
+.company {
+  &__container {
+    padding: 12rem 14.4rem;
+    @include respond(big-tablets) {
+      padding: 12rem 3rem;
+    }
+    @include respond(small-tablets) {
+      padding: 5rem 3rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 200%;
+    line-height: 5rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: $gray-text-color;
+  }
+
+  &__grid-container {
+    max-width: 94.3rem;
+    margin: 8rem auto 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 8.4rem;
+    grid-row-gap: 6.4rem;
+    @include respond(regular-desktop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(small-tablets) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    display: block;
+    @include respond(regular-desktop) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+}

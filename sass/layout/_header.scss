@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  @include respond(big-tablets) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include respond(small-tablets) {
+    flex-direction: column;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    @include respond(small-tablets) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    margin-right: 4rem;
+    transition: color 0.3s, transform 0.3s;
+    @include on-event {
+      color: #0987d7;
+    }
+    @include respond(small-tablets) {
+      margin: 1rem auto;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    @include respond(small-tablets) {
+      margin: 1rem auto;
+    }
+  }
+
+  &__logo {
+    margin-right: 7.1rem;
+    @include respond(small-tablets) {
+      margin: 1rem auto;
+    }
+  }
+}
